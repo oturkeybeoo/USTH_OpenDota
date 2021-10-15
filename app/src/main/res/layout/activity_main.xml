@@ -6,11 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/Mainactivity">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/blue"
+                app:tabIndicatorColor="@color/light_blue"
+                app:tabMode="auto"
+                app:tabSelectedTextColor="@color/light_blue"
+                app:tabTextColor="@color/white" />
+        </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
