@@ -10,6 +10,12 @@
     <color name="blue">#182852</color>
     <color name="light_blue">#32B5FF</color>
     <color name="gray">#C4C4C4</color>
+<<<<<<< HEAD
     <color name="green">#086800</color>
     <color name="red">#972424</color>
+=======
+    <color name="light_gray">#64C4C4C4</color>
+    <color name="green">#32A852</color>
+    <color name="red">#C7240E</color>
+>>>>>>> f4605db55fefa4cee05131e0cf4cbf819f7a6434
 </resources>
