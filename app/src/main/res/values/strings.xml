@@ -20,9 +20,9 @@
     <string name="player">Player</string>
     <string name="last_played">Last played</string>
     <string name="benchmarck">Benchmark</string>
-    <string name="match_id">Match ID</string>
-    <string name="region">Region</string>
-    <string name="skill">Skill</string>
+    <string name="match_id">Match ID: </string>
+    <string name="region">Region: </string>
+    <string name="skill">Skill: </string>
     <string name="gpm">GPM</string>
     <string name="xpm">XPM</string>
     <string name="kpm">KPM</string>
@@ -30,5 +30,7 @@
     <string name="turbo">turbo</string>
     <string name="themes">Themes</string>
     <string name="languages">Languages</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

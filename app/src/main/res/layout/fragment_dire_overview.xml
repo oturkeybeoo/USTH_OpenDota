@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DireOverviewFragment"
+    android:orientation="vertical"
+    android:background="@color/blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/dire_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dire_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="DIRE"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/dire_logo"/>
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/hero"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/player"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/kda"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/gpm"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/xpm"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+        </TableRow>
+
+        <TableRow
+            android:background="@color/gray">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/dire_logo"
+                android:id="@+id/dire_avatar_1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="player 1"
+                android:textColor="@color/white"
+                android:id="@+id/dire_player_1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="1/1/1"
+                android:id="@+id/dire_kda_1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_gpm_1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_xpm_1"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/radiant_logo"
+                android:id="@+id/dire_avatar_2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="player 1"
+                android:textColor="@color/white"
+                android:id="@+id/dire_player_2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="1/1/1"
+                android:id="@+id/dire_kda_2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_gpm_2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_xpm_2"/>
+
+        </TableRow>
+
+        <TableRow
+            android:background="@color/gray">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/radiant_logo"
+                android:id="@+id/dire_avatar_3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="player 1"
+                android:textColor="@color/white"
+                android:id="@+id/dire_player_3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="1/1/1"
+                android:id="@+id/dire_kda_3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_gpm_3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_xpm_3"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/radiant_logo"
+                android:id="@+id/dire_avatar_4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="player 1"
+                android:textColor="@color/white"
+                android:id="@+id/dire_player_4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="1/1/1"
+                android:id="@+id/dire_kda_4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_gpm_4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_xpm_4"/>
+
+        </TableRow>
+
+        <TableRow
+            android:background="@color/gray">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/radiant_logo"
+                android:id="@+id/dire_avatar_5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="player 1"
+                android:textColor="@color/white"
+                android:id="@+id/dire_player_5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="1/1/1"
+                android:id="@+id/dire_kda_5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_gpm_5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="111"
+                android:id="@+id/dire_xpm_5"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+package vn.edu.usth.opendota;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
+
+import android.os.Bundle;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
+public class MatchDetailsActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_match_details);
+
+        TabLayout match_details_tablayout = findViewById(R.id.match_details_tab_layout);
+        ViewPager2 match_details_view_pager = findViewById(R.id.match_details_view_pager);
+
+        OverviewAdapter overview_adapter = new OverviewAdapter(this);
+        match_details_view_pager.setAdapter(overview_adapter);
+
+        new TabLayoutMediator(match_details_tablayout, match_details_view_pager, (tab, position) -> {
+            switch (position) {
+                case 0:
+                    tab.setText("Overview");
+                    break;
+                case 1:
+                    tab.setText("Benchmark");
+                    break;
+            }
+        }).attach();
+
+    }
+
+}

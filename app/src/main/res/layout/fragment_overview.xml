@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OverviewFragment"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:name="vn.edu.usth.opendota.OverviewFragment"
+        android:id="@+id/overview_fragment"
+        android:layout_margin="10dp"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:name="vn.edu.usth.opendota.RadiantOverviewFragment"
+        android:id="@+id/radiant_overview_fragment"
+        android:layout_margin="10dp"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:name="vn.edu.usth.opendota.DireOverviewFragment"
+        android:id="@+id/dire_overview_fragment"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
