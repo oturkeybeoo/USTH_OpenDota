@@ -6,15 +6,20 @@
     tools:context=".MatchDetailsActivity"
     android:orientation="vertical">
     
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/match_details_view_pager"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp" >
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/match_details_tab_layout"/>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/match_details_tab_layout"
+            android:layout_gravity="bottom"/>
+
+    </androidx.viewpager.widget.ViewPager>
+
+
 
 </LinearLayout>

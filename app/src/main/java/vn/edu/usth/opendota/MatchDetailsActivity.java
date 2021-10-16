@@ -18,19 +18,10 @@ public class MatchDetailsActivity extends AppCompatActivity {
         TabLayout match_details_tablayout = findViewById(R.id.match_details_tab_layout);
         ViewPager2 match_details_view_pager = findViewById(R.id.match_details_view_pager);
 
-        OverviewAdapter overview_adapter = new OverviewAdapter(this);
+        OverviewAdapter overview_adapter = new OverviewAdapter();
         match_details_view_pager.setAdapter(overview_adapter);
 
-        new TabLayoutMediator(match_details_tablayout, match_details_view_pager, (tab, position) -> {
-            switch (position) {
-                case 0:
-                    tab.setText("Overview");
-                    break;
-                case 1:
-                    tab.setText("Benchmark");
-                    break;
-            }
-        }).attach();
+
 
     }
 
