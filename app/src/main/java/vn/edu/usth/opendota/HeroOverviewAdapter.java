@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class HeroOverviewAdapter extends FragmentStateAdapter {
-    public HeroOverviewAdapter(@NonNull FragmentActivity fragmentActivity) {
+    public HeroOverviewAdapter(@NonNull HeroOverviewFragment fragmentActivity) {
         super(fragmentActivity);
     }
 

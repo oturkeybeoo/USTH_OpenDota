@@ -4,16 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.motion.widget.ViewTransition;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.viewpager.widget.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    private static final int FRAGMENT_HOME = 0;
+
+    private int mCurrentFragment = FRAGMENT_HOME;
 
     private DrawerLayout drawerLayout;
 
@@ -21,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AddViewPager();
 
         Toolbar toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
@@ -35,36 +41,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void AddViewPager() {
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        // setting up the adapter
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-
-        // add the fragments
-        viewPagerAdapter.add(new HomeOverviewFragment(), "Overview");
-        viewPagerAdapter.add(new HomeMatchesFragment(), "Matches");
-        viewPagerAdapter.add(new HomeHeroesFragment(), "Heroes");
-        viewPagerAdapter.add(new HomePeersFragment(), "Peers");
-
-
-        // Set the adapter
-        viewPager.setAdapter(viewPagerAdapter);
-    }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.home) {
-
-        } else if (id == R.id.heroes) {
-
-        } else if (id == R.id.search) {
-
-        } else if (id == R.id.settings) {
-
-        } else if (id == R.id.logout) {
+        switch(item.getItemId()){
+            case R.id.home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
+                        new HomeFragment()).commit();
+                break;
+            case R.id.heroes:
+                getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
+                        new HeroOverviewFragment()).commit();
+                break;
+//            case R.id.search:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
+//                        new SearchActivity()).commit();
+//                break;
 
         }
+//        int id = item.getItemId();
+//        if (id == R.id.home) {
+//            if (mCurrentFragment != FRAGMENT_HOME) {
+//
+//
+//            }
+//
+//        } else if (id == R.id.heroes) {
+//
+//        } else if (id == R.id.search) {
+//
+//        } else if (id == R.id.settings) {
+//
+//        } else if (id == R.id.logout) {
+//
+//        }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
@@ -77,5 +86,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.placeholder_fragment, fragment);
+        fragmentTransaction.commit();
     }
 }
