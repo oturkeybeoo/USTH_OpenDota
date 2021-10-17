@@ -842,8 +842,19 @@
         </LinearLayout>
     </ScrollView>
 
+<<<<<<< HEAD
 
 
 
+=======
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/blue"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textColor="@color/white" />
+>>>>>>> 07057e3d8ac620cc532e2e71ac8ed3c3a2eadcb9
 
 </LinearLayout>
