@@ -4,7 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".HeroOverviewFragment">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/hero_overview_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/hero_overview_tab_layout"
@@ -12,12 +21,6 @@
         android:layout_height="wrap_content"
         android:background= "@color/blue"
         android:layout_gravity="bottom"
-        />
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/hero_overview_view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         />
 
 </LinearLayout>
