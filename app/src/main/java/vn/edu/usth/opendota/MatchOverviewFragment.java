@@ -55,9 +55,9 @@ public class MatchOverviewFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup match_details_overview,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_match_overview, container, false);
+        return inflater.inflate(R.layout.fragment_match_overview, match_details_overview, false);
     }
 }
