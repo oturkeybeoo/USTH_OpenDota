@@ -13,7 +13,7 @@
             android:name=".MatchDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

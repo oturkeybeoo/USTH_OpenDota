@@ -30,6 +30,9 @@
     <string name="turbo">turbo</string>
     <string name="themes">Themes</string>
     <string name="languages">Languages</string>
+
+    <string name="open_drawer_navigation">Open drawer navigation</string>
+    <string name="close_drawer_navigation">Close drawer navigation</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

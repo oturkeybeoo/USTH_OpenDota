@@ -5,11 +5,14 @@
       <map>
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/drawable/ic_launcher_background.xml" value="0.28615384615384615" />
-        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/activity_match_details.xml" value="0.2" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/activity_search.xml" value="0.27447916666666666" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_benchmark.xml" value="0.184375" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_dire_overview.xml" value="0.27447916666666666" />
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_hero_pub.xml" value="0.40903823870220163" />
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_hero_ranked.xml" value="0.4" />
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_hero_turbo.xml" value="0.536" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_heroes.xml" value="0.27447916666666666" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_matches.xml" value="0.4" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_overview.xml" value="0.4" />
@@ -21,7 +24,7 @@
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_overview.xml" value="0.27447916666666666" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_radiant_overview.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/search_result.xml" value="0.4" />
->>>>>>> 6f48a176a28806ee97d110f069ffd5c2e85ccc89
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/menu/navigation_menu.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>
