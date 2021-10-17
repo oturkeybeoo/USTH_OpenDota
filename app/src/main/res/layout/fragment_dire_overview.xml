@@ -28,9 +28,16 @@
 
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_blue"
+        android:layout_marginVertical="1dp"/>
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <TableRow>
 
@@ -38,6 +45,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="@string/hero"
                 android:textColor="@color/white" />
 
@@ -46,6 +55,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/player"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white" />
 
             <TextView
@@ -53,6 +64,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/kda"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white" />
 
             <TextView
@@ -60,6 +73,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/gpm"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white" />
 
             <TextView
@@ -67,6 +82,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/xpm"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white" />
 
         </TableRow>
@@ -78,6 +95,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/dire_logo" />
 
             <TextView
@@ -86,6 +105,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="player 1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white" />
 
             <TextView
@@ -94,6 +115,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="1/1/1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/white" />
 
             <TextView
@@ -101,6 +124,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -109,6 +134,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -121,6 +148,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+
                 android:src="@drawable/radiant_logo" />
 
             <TextView
@@ -128,7 +158,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="player 1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="player 2"
                 android:textColor="@color/white" />
 
             <TextView
@@ -136,6 +168,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="1/1/1"
                 android:textColor="@color/white" />
 
@@ -144,6 +178,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -152,6 +188,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -164,6 +202,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/radiant_logo" />
 
             <TextView
@@ -171,7 +211,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="player 1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="player 3"
                 android:textColor="@color/white" />
 
             <TextView
@@ -179,6 +221,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="1/1/1"
                 android:textColor="@color/white" />
 
@@ -187,6 +231,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -195,6 +241,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -207,6 +255,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/radiant_logo" />
 
             <TextView
@@ -214,7 +264,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="player 1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="player 4"
                 android:textColor="@color/white" />
 
             <TextView
@@ -222,6 +274,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="1/1/1"
                 android:textColor="@color/white" />
 
@@ -230,6 +284,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -238,6 +294,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -250,6 +308,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/radiant_logo" />
 
             <TextView
@@ -257,7 +317,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="player 1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="player 5"
                 android:textColor="@color/white" />
 
             <TextView
@@ -265,6 +327,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="1/1/1"
                 android:textColor="@color/white" />
 
@@ -273,6 +337,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 
@@ -281,6 +347,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="111"
                 android:textColor="@color/white" />
 

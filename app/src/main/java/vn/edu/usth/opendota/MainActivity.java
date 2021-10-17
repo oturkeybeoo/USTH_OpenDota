@@ -10,6 +10,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,10 +41,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.navgation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
+                new HomeFragment()).commit();
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
         switch(item.getItemId()){
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
@@ -52,28 +59,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
                         new HeroOverviewFragment()).commit();
                 break;
-//            case R.id.search:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
-//                        new SearchActivity()).commit();
-//                break;
-
+            case R.id.search:
+                Intent search_intent = new Intent(this, SearchActivity.class);
+                startActivity(search_intent);
+                break;
+            case R.id.settings:
+                Intent settings_intent = new Intent(this, SettingFragment.class);
+                startActivity(settings_intent);
+                break;
         }
-//        int id = item.getItemId();
-//        if (id == R.id.home) {
-//            if (mCurrentFragment != FRAGMENT_HOME) {
-//
-//
-//            }
-//
-//        } else if (id == R.id.heroes) {
-//
-//        } else if (id == R.id.search) {
-//
-//        } else if (id == R.id.settings) {
-//
-//        } else if (id == R.id.logout) {
-//
-//        }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
