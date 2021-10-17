@@ -13,10 +13,14 @@
 <!--            android:name=".MainActivity"-->
 <!--            android:exported="true" />-->
         <activity
+<<<<<<< HEAD
+            android:name=".SettingFragment"
+=======
             android:name=".MatchDetailsActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+>>>>>>> 07057e3d8ac620cc532e2e71ac8ed3c3a2eadcb9
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".SettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edge"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Themes"
+            android:textColor="@color/light_blue"
+            android:textSize="21dp" />
+
+        <RadioGroup
+            android:id="@+id/Themes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/Theme_Default">
+
+        <RadioButton
+            android:id="@+id/Theme_Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenDota (Default)"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/Theme_SkyDolch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SkyDolch"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/Theme_Hyperfuse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hyperfuse"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/Theme_Invisibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invisibility"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/Theme_NightDota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NightDota"
+            android:textColor="@color/white"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edge"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Languages"
+            android:textColor="@color/light_blue"
+            android:textSize="21dp" />
+
+        <RadioGroup
+            android:id="@+id/Languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/Language_English">
+
+            <RadioButton
+                android:id="@+id/Language_English"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English (Default)"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/Language_French"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Francais"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/Language_German"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deutsch"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/Language_Italian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Italiano"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/Language_Vietnamese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiếng Việt"
+                android:textColor="@color/white"/>
+
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
