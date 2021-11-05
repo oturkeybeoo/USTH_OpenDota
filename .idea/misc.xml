@@ -29,9 +29,18 @@
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_setting.xml" value="0.1859375" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/search_result.xml" value="0.4" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/menu/navigation_menu.xml" value="0.27447916666666666" />
+<<<<<<< HEAD
         <entry key="..\:/Users/admin/Downloads/new/USTH_OpenDota/app/src/main/res/layout/fragment_hero_overview.xml" value="0.264" />
         <entry key="..\:/Users/admin/Downloads/new/USTH_OpenDota/app/src/main/res/layout/fragment_hero_ranked.xml" value="0.264" />
         <entry key="..\:/Users/admin/Downloads/new/USTH_OpenDota/app/src/main/res/layout/ranked_item_list.xml" value="0.27447916666666666" />
+=======
+        <entry key="..\:/Users/Admin/Desktop/USTH_OpenDota/app/src/main/res/layout/fragment_home_heroes.xml" value="0.146875" />
+        <entry key="..\:/Users/Admin/Desktop/USTH_OpenDota/app/src/main/res/layout/fragment_home_matches.xml" value="0.146875" />
+        <entry key="..\:/Users/Admin/Desktop/USTH_OpenDota/app/src/main/res/layout/fragment_home_overview.xml" value="0.2101851851851852" />
+        <entry key="..\:/Users/Admin/Desktop/USTH_OpenDota/app/src/main/res/layout/fragment_home_overview_recent_matches.xml" value="0.5697368421052632" />
+        <entry key="..\:/Users/Admin/Desktop/USTH_OpenDota/app/src/main/res/layout/fragment_home_peers.xml" value="0.146875" />
+        <entry key="..\:/Users/Admin/Desktop/USTH_OpenDota/app/src/main/res/layout/match_item.xml" value="0.4" />
+>>>>>>> 401a6ae11f1251204812b788ab8de48d1f6eeac5
       </map>
     </option>
   </component>
