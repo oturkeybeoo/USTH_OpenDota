@@ -4,24 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeOverviewRecentMatchesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class HomeOverviewRecentMatchesFragment extends Fragment {
 
     public HomeOverviewRecentMatchesFragment() {
         // Required empty public constructor
     }
-
+    private RecyclerView recyclerView;
+    ArrayList<Match> matchList;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,15 +31,17 @@ public class HomeOverviewRecentMatchesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_overview_recent_matches, container, false);
         // Inflate the layout for this fragment
-        LinearLayout linearTest = (LinearLayout) view.findViewById(R.id.recentMatch);
-        linearTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Click", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), MatchDetailsActivity.class);
-                startActivity(intent);
-            }
-        });
+        recyclerView = view.findViewById(R.id.recentmatch);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+        recyclerView.setAdapter(new MatchAdapter(getContext(), initData()));
         return view;
+    }
+    private ArrayList<Match> initData() {
+        matchList = new ArrayList<>();
+        matchList.add(new Match(R.drawable.dire_logo,"All Draft\n Ranked", "5 days", "26.43", "2/6/2"));
+
+        return matchList;
     }
 }

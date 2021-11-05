@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dire_logo_1"
+        app:shapeAppearanceOverlay="@style/roundimageView"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/matchHero"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="All Draft\nRanked"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:id="@+id/matchMode"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="5 days"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:id="@+id/matchEnd"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="26:43"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:id="@+id/matchLength"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="2/6/2"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:id="@+id/matchKda"/>
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/red"/>
+</LinearLayout>
