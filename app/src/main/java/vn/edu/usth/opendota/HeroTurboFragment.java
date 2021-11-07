@@ -15,6 +15,8 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.usth.opendota.adapter.ItemRankedListAdapter;
+
 
 public class HeroTurboFragment extends Fragment {
         private ItemRankedListAdapter adapter;

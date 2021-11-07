@@ -20,6 +20,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.usth.opendota.adapter.ItemRankedListAdapter;
+
 
 public class HeroPubFragment extends Fragment {
         private ItemRankedListAdapter adapter;
@@ -116,10 +118,10 @@ public class HeroPubFragment extends Fragment {
             // thay doi list khi du lieu thay doi
             adapter.notifyDataSetChanged();
         }else {
-            HeroRanked hero1 = new HeroRanked("Devine", "Abadon", "50.00%", "20.08%");
-            HeroRanked hero2 = new HeroRanked("Devine", "Zeus", "40.00%", "30.08%");
+            HeroRanked hero1 = new HeroRanked("Divine", "Abaddon", "50.00%", "20.08%");
+            HeroRanked hero2 = new HeroRanked("Divine", "Zeus", "40.00%", "30.08%");
             HeroRanked hero3 = new HeroRanked("Legend", "Lina", "20.00%", "20.08%");
-            HeroRanked hero4 = new HeroRanked("Devine", "Mars", "30.00%", "50.08%");
+            HeroRanked hero4 = new HeroRanked("Divine", "Mars", "30.00%", "50.08%");
             HeroRanked hero5 = new HeroRanked("Legend", "Marci", "80.00%", "60.08%");
             heroRankedLst.add(hero1);
             heroRankedLst.add(hero2);
@@ -132,7 +134,7 @@ public class HeroPubFragment extends Fragment {
             RankObject rankObject2 = new RankObject(2, "dire_logo", "Crusader");
             RankObject rankObject3 = new RankObject(3, "dire_logo", "Archon");
             RankObject rankObject4 = new RankObject(4, "dire_logo", "Legend");
-            RankObject rankObject5 = new RankObject(5, "dire_logo", "Devine");
+            RankObject rankObject5 = new RankObject(5, "dire_logo", "Divine");
             rankObjectList.add(rankObject0);
             rankObjectList.add(rankObject1);
             rankObjectList.add(rankObject2);

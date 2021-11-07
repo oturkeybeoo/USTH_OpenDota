@@ -59,7 +59,8 @@ public class CustomApdater extends BaseAdapter {
         textViewName.setText(rankObject.getRank_name());
         // set icon
         ImageView iconRank = rollView.findViewById(this.textViewItemIcon);
-        if ("Devine".equals(rankObject.getRank_name())){
+        // thay icon theo rank
+        if ("Divine".equals(rankObject.getRank_name())){
             iconRank.setImageResource(R.drawable.dire_logo);
         } else {
             iconRank.setImageResource(R.drawable.dire_logo);
