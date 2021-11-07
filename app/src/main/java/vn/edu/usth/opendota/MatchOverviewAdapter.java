@@ -15,9 +15,9 @@ public class MatchOverviewAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             default:
-                return new OverviewFragment();
+                return new MatchOverviewFragment();
             case 0:
-                return new OverviewFragment();
+                return new MatchOverviewFragment();
             case 1:
                 return new MatchBenchmarkFragment();
         }

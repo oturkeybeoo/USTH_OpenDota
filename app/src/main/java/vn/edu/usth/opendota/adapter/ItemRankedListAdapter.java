@@ -1,4 +1,4 @@
-package vn.edu.usth.opendota;
+package vn.edu.usth.opendota.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,6 +12,9 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import vn.edu.usth.opendota.HeroRanked;
+import vn.edu.usth.opendota.R;
 
 public class ItemRankedListAdapter extends RecyclerView.Adapter<ItemRankedListAdapter.ViewHolder> {
     private Activity activity;

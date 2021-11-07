@@ -1,4 +1,4 @@
-package vn.edu.usth.opendota;
+package vn.edu.usth.opendota.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+
+import vn.edu.usth.opendota.R;
+import vn.edu.usth.opendota.SearchUser;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHolder> implements Filterable {
 

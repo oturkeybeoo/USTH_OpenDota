@@ -1,10 +1,11 @@
-package vn.edu.usth.opendota;
+package vn.edu.usth.opendota.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,15 +13,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import vn.edu.usth.opendota.Match;
+import vn.edu.usth.opendota.R;
+import vn.edu.usth.opendota.SelectListener;
+
 
 public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> {
-    Context context;
-    ArrayList<Match> listMatch;
 
-    public MatchAdapter(Context context, ArrayList<Match> listMatch) {
+    private Context context;
+    private ArrayList<Match> listMatch;
+    private SelectListener listener;
+
+    public MatchAdapter(Context context, ArrayList<Match> listMatch, SelectListener listener) {
         this.context = context;
         this.listMatch = listMatch;
+        this.listener = listener;
     }
+
+
+
 
     @NonNull
     @Override
@@ -39,6 +50,13 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
         holder.matchLength.setText(match.getLength());
         holder.matchEnd.setText(match.getEnded());
         holder.matchKda.setText(match.getKda());
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClicked();listMatch.get(position);
+            }
+        });
     }
 
     @Override
@@ -49,6 +67,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView matchHero;
         TextView matchMode, matchLength, matchEnd, matchKda;
+        LinearLayout layout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,7 +77,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
             matchEnd = itemView.findViewById(R.id.matchEnd);
             matchLength = itemView.findViewById(R.id.matchLength);
             matchKda = itemView.findViewById(R.id.matchKda);
-
+            layout = itemView.findViewById(R.id.match_item);
         }
     }
 }

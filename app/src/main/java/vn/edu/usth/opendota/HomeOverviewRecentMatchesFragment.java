@@ -13,8 +13,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import vn.edu.usth.opendota.adapter.MatchAdapter;
 
-public class HomeOverviewRecentMatchesFragment extends Fragment {
+
+public class HomeOverviewRecentMatchesFragment extends Fragment implements SelectListener{
 
     public HomeOverviewRecentMatchesFragment() {
         // Required empty public constructor
@@ -35,7 +37,7 @@ public class HomeOverviewRecentMatchesFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        recyclerView.setAdapter(new MatchAdapter(getContext(), initData()));
+        recyclerView.setAdapter(new MatchAdapter(getContext(), initData(), this));
         return view;
     }
     private ArrayList<Match> initData() {
@@ -43,5 +45,11 @@ public class HomeOverviewRecentMatchesFragment extends Fragment {
         matchList.add(new Match(R.drawable.dire_logo,"All Draft\n Ranked", "5 days", "26.43", "2/6/2"));
 
         return matchList;
+    }
+
+    @Override
+    public void onItemClicked() {
+        Intent intent = new Intent(getActivity(), MatchDetailsActivity.class);
+        startActivity(intent);
     }
 }

@@ -13,7 +13,8 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
+import vn.edu.usth.opendota.adapter.ItemRankedListAdapter;
 
 
 public class HeroRankedFragment extends Fragment {
