@@ -86,9 +86,9 @@
                 </LinearLayout>
                 <!--List match-->
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recentheroes"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/recentmatch">
+                    android:layout_height="match_parent">
 
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>

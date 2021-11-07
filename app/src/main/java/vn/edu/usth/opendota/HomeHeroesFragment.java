@@ -1,5 +1,6 @@
 package vn.edu.usth.opendota;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,7 +13,9 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class HomeHeroesFragment extends Fragment {
+import vn.edu.usth.opendota.adapter.MatchAdapter;
+
+public class HomeHeroesFragment extends Fragment implements SelectListener{
 
     public HomeHeroesFragment() {
         // Required empty public constructor
@@ -28,12 +31,13 @@ public class HomeHeroesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_matches, container, false);
+
         // Inflate the layout for this fragment
         recyclerView = view.findViewById(R.id.recentmatch);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        recyclerView.setAdapter(new MatchAdapter(getContext(), initData()));
+        recyclerView.setAdapter(new MatchAdapter(getContext(), initData(), this));
         return view;
     }
     private ArrayList<Match> initData() {
@@ -41,5 +45,11 @@ public class HomeHeroesFragment extends Fragment {
         matchList.add(new Match(R.drawable.dire_logo,"All Draft\n Ranked", "5 days", "26.43", "2/6/2"));
 
         return matchList;
+    }
+
+    @Override
+    public void onItemClicked() {
+        Intent intent = new Intent(getActivity(), MatchDetailsActivity.class);
+        startActivity(intent);
     }
 }

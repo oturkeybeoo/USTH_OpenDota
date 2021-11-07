@@ -33,6 +33,7 @@ public class MatchOverviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentMatchOverviewBinding.inflate(inflater, container, false);
+
         View view = binding.getRoot();
         fetchData();
         return view;
@@ -167,4 +168,11 @@ public class MatchOverviewFragment extends Fragment {
 
         return String.format("%02d:%02d:%02d", h, m, s);
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
 }

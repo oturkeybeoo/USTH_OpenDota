@@ -29,6 +29,8 @@ public class MatchDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_details);
 
+        String match_id = getIntent().getStringExtra("match_id");
+
         TabLayout match_details_tab_layout = findViewById(R.id.match_details_tab_layout);
         ViewPager2 match_details_view_pager = findViewById(R.id.match_details_view_pager);
 
