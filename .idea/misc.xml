@@ -21,7 +21,7 @@
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_overview.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_overview_recent_matches.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_overview_winrate.xml" value="0.264" />
-        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_peers.xml" value="0.18333333333333332" />
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_home_peers.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_match_benchmark.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_match_overview.xml" value="0.264" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_overview.xml" value="0.264" />
@@ -29,6 +29,7 @@
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/fragment_setting.xml" value="0.1859375" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/hero_item.xml" value="0.27447916666666666" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/match_item.xml" value="0.264" />
+        <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/peer_item.xml" value="0.27447916666666666" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/layout/search_result.xml" value="0.4" />
         <entry key="..\:/3rd year/Mobile Application Development/USTH_OpenDota/app/src/main/res/menu/navigation_menu.xml" value="0.27447916666666666" />
       </map>
