@@ -3,96 +3,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeHeroesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1-20 of 121 heroes"
-                android:layout_marginVertical="10dp"
-                android:gravity="center"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@drawable/rounded_edge"
+                android:orientation="vertical"
                 android:paddingVertical="20dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="HEROES"
                     android:textColor="@color/white"
-                    android:layout_gravity="center"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@color/light_blue"
-                    android:layout_marginVertical="10dp"/>
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/light_blue" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Hero"
                         android:textColor="@color/white"
-                        android:gravity="center"
-                        android:textSize="14dp"/>
+                        android:textSize="14dp" />
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Mode"
                         android:textColor="@color/white"
-                        android:gravity="center"
-                        android:textSize="14dp"/>
+                        android:textSize="14dp" />
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Ended"
                         android:textColor="@color/white"
-                        android:gravity="center"
-                        android:textSize="14dp"/>
+                        android:textSize="14dp" />
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Length"
                         android:textColor="@color/white"
-                        android:gravity="center"
-                        android:textSize="14dp"/>
+                        android:textSize="14dp" />
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:text="K/D/A"
                         android:textColor="@color/white"
-                        android:gravity="center"
-                        android:textSize="14dp"/>
+                        android:textSize="14dp" />
+
                 </LinearLayout>
+
                 <!--List match-->
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recentheroes"
+                    android:id="@+id/recent_heroes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                 </androidx.recyclerview.widget.RecyclerView>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
 
 

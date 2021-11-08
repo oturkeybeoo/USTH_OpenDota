@@ -1,20 +1,20 @@
-package vn.edu.usth.opendota;
+package vn.edu.usth.opendota.model;
 
 import java.util.ArrayList;
 
-public class Match {
+public class MatchModel {
     private int hero;
     private String mode;
-    private String ended;
-    private String length;
     private String kda;
+    private String length;
+    private String ended;
 
-    public Match(int hero, String mode, String ended, String length, String kda) {
+    public MatchModel(int hero, String mode, String kda, String length, String ended) {
         this.hero = hero;
         this.mode = mode;
-        this.ended = ended;
-        this.length = length;
         this.kda = kda;
+        this.length = length;
+        this.ended = ended;
     }
 
     public int getHero() {
@@ -33,12 +33,12 @@ public class Match {
         this.mode = mode;
     }
 
-    public String getEnded() {
-        return ended;
+    public String getKda() {
+        return kda;
     }
 
-    public void setEnded(String ended) {
-        this.ended = ended;
+    public void setKda(String kda) {
+        this.kda = kda;
     }
 
     public String getLength() {
@@ -49,11 +49,11 @@ public class Match {
         this.length = length;
     }
 
-    public String getKda() {
-        return kda;
+    public String getEnded() {
+        return ended;
     }
 
-    public void setKda(String kda) {
-        this.kda = kda;
+    public void setEnded(String ended) {
+        this.ended = ended;
     }
 }

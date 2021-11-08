@@ -23,22 +23,7 @@
         android:textColor="@color/white"
         android:layout_weight="1"
         android:id="@+id/matchMode"/>
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="5 days"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:layout_weight="1"
-        android:id="@+id/matchEnd"/>
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="26:43"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:layout_weight="1"
-        android:id="@+id/matchLength"/>
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -47,6 +32,25 @@
         android:textColor="@color/white"
         android:layout_weight="1"
         android:id="@+id/matchKda"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="26:43"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:id="@+id/matchLength"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="5 days"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:id="@+id/matchEnd"/>
+
     <View
         android:layout_width="4dp"
         android:layout_height="match_parent"

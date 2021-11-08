@@ -1,6 +1,5 @@
 package vn.edu.usth.opendota;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,14 +13,15 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import vn.edu.usth.opendota.adapter.MatchAdapter;
+import vn.edu.usth.opendota.model.MatchModel;
 
-public class HomePeersFragment extends Fragment implements SelectListener{
+public class HomePeersFragment extends Fragment {
 
     public HomePeersFragment() {
         // Required empty public constructor
     }
     private RecyclerView recyclerView;
-    ArrayList<Match> matchList;
+    ArrayList<MatchModel> matchList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,19 +37,19 @@ public class HomePeersFragment extends Fragment implements SelectListener{
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        recyclerView.setAdapter(new MatchAdapter(getContext(), initData(), this));
+        recyclerView.setAdapter(new MatchAdapter(getContext(), initData()));
         return view;
     }
-    private ArrayList<Match> initData() {
+    private ArrayList<MatchModel> initData() {
         matchList = new ArrayList<>();
-        matchList.add(new Match(R.drawable.dire_logo,"All Draft\n Ranked", "5 days", "26.43", "2/6/2"));
+        matchList.add(new MatchModel(R.drawable.dire_logo,"All Draft\n Ranked", "5 days", "26.43", "2/6/2"));
 
         return matchList;
     }
 
-    @Override
-    public void onItemClicked() {
-        Intent intent = new Intent(getActivity(), MatchDetailsActivity.class);
-        startActivity(intent);
-    }
+//    @Override
+//    public void onItemClicked() {
+//        Intent intent = new Intent(getActivity(), MatchDetailsActivity.class);
+//        startActivity(intent);
+//    }
 }

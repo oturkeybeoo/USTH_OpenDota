@@ -59,14 +59,6 @@ public class MatchOverviewFragment extends Fragment {
                             String radiant_team_name = response.getJSONObject("radiant_team").getString("name");
                             String dire_team_name = response.getJSONObject("dire_team").getString("name");
                             JSONArray players = response.getJSONArray("players");
-//                            String[] avatars = {"match_overview_radiant_avatar_1", "match_overview_radiant_avatar_2", "match_overview_radiant_avatar_3", "match_overview_radiant_avatar_4", "match_overview_radiant_avatar_5", "match_overview_dire_avatar_1", "match_overview_dire_avatar_2", "match_overview_dire_avatar_3", "match_overview_dire_avatar_4", "match_overview_dire_avatar_5"};
-//                            String[] names = {"match_overview_radiant_player_1", "match_overview_radiant_player_2", "match_overview_radiant_player_3", "match_overview_radiant_player_4", "match_overview_radiant_player_5", "match_overview_dire_player_1", "match_overview_dire_player_2", "match_overview_dire_player_3", "match_overview_dire_player_4", "match_overview_dire_player_5"};
-//                            String[] kdas = {"match_overview_radiant_kda_1", "match_overview_radiant_kda_2", "match_overview_radiant_kda_3", "match_overview_radiant_kda_4", "match_overview_radiant_kda_5", "match_overview_dire_kda_1", "match_overview_dire_kda_2", "match_overview_dire_kda_3", "match_overview_dire_kda_4", "match_overview_dire_kda_5"};
-//                            String[] gpms = {"match_overview_radiant_gpm_1", "match_overview_radiant_gpm_2", "match_overview_radiant_gpm_3", "match_overview_radiant_gpm_4", "match_overview_radiant_gpm_5", "match_overview_dire_gpm_1", "match_overview_dire_gpm_2", "match_overview_dire_gpm_3", "match_overview_dire_gpm_4", "match_overview_dire_gpm_5"};
-//                            String[] xpms = {"match_overview_radiant_xpm_1", "match_overview_radiant_xpm_2", "match_overview_radiant_xpm_3", "match_overview_radiant_xpm_4", "match_overview_radiant_xpm_5", "match_overview_dire_xpm_1", "match_overview_dire_xpm_2", "match_overview_dire_xpm_3", "match_overview_dire_xpm_4", "match_overview_dire_xpm_5"};
-
-
-
 
                             if (radiant_win) {
                                 binding.matchOverviewVictoryTeam.setText("Radiant Victory");
@@ -87,62 +79,42 @@ public class MatchOverviewFragment extends Fragment {
                             JSONObject player_1 = players.getJSONObject(0);
                             binding.matchOverviewRadiantPlayer1.setText(player_1.getString("personaname"));
                             binding.matchOverviewRadiantKda1.setText(String.format("%d/%d/%d", player_1.getInt("kills"), player_1.getInt("deaths"), player_1.getInt("assists")));
-//                            binding.matchOverviewRadiantGpm1.setText(String.format("%d",player_1.getInt("gold_per_min")));
-//                            binding.matchOverviewRadiantXpm1.setText(String.format("%d",player_1.getInt("xp_per_min")));
 
                             JSONObject player_2 = players.getJSONObject(1);
                             binding.matchOverviewRadiantPlayer2.setText(player_2.getString("personaname"));
                             binding.matchOverviewRadiantKda2.setText(String.format("%d/%d/%d", player_2.getInt("kills"), player_2.getInt("deaths"), player_2.getInt("assists")));
-//                            binding.matchOverviewRadiantGpm2.setText(String.format("%d", player_2.getInt("gold_per_min")));
-//                            binding.matchOverviewRadiantXpm2.setText(String.format("%d", player_2.getInt("xp_per_min")));
 
                             JSONObject player_3 = players.getJSONObject(2);
                             binding.matchOverviewRadiantPlayer3.setText(player_2.getString("personaname"));
                             binding.matchOverviewRadiantKda3.setText(String.format("%d/%d/%d", player_3.getInt("kills"), player_3.getInt("deaths"), player_3.getInt("assists")));
-//                            binding.matchOverviewRadiantGpm3.setText(String.format("%d",player_3.getInt("gold_per_min")));
-//                            binding.matchOverviewRadiantXpm3.setText(String.format("%d",player_3.getInt("xp_per_min")));
 
                             JSONObject player_4 = players.getJSONObject(3);
                             binding.matchOverviewRadiantPlayer4.setText(player_4.getString("personaname"));
                             binding.matchOverviewRadiantKda4.setText(String.format("%d/%d/%d", player_4.getInt("kills"), player_4.getInt("deaths"), player_4.getInt("assists")));
-//                            binding.matchOverviewRadiantGpm4.setText(String.format("%d",player_4.getInt("gold_per_min")));
-//                            binding.matchOverviewRadiantXpm4.setText(String.format("%d",player_4.getInt("xp_per_min")));
 
                             JSONObject player_5 = players.getJSONObject(4);
                             binding.matchOverviewRadiantPlayer5.setText(player_5.getString("personaname"));
                             binding.matchOverviewRadiantKda5.setText(String.format("%d/%d/%d", player_5.getInt("kills"), player_5.getInt("deaths"), player_5.getInt("assists")));
-//                            binding.matchOverviewRadiantGpm5.setText(String.format("%d",player_5.getInt("gold_per_min")));
-//                            binding.matchOverviewRadiantXpm5.setText(String.format("%d",player_5.getInt("xp_per_min")));
 
                             JSONObject player_6 = players.getJSONObject(5);
                             binding.matchOverviewDirePlayer1.setText(player_6.getString("personaname"));
                             binding.matchOverviewDireKda1.setText(String.format("%d/%d/%d", player_6.getInt("kills"), player_6.getInt("deaths"), player_6.getInt("assists")));
-//                            binding.matchOverviewDireGpm1.setText(String.format("%d",player_6.getInt("gold_per_min")));
-//                            binding.matchOverviewDireXpm1.setText(String.format("%d",player_6.getInt("xp_per_min")));
 
                             JSONObject player_7 = players.getJSONObject(6);
                             binding.matchOverviewDirePlayer2.setText(player_7.getString("personaname"));
                             binding.matchOverviewDireKda2.setText(String.format("%d/%d/%d", player_7.getInt("kills"), player_7.getInt("deaths"), player_7.getInt("assists")));
-//                            binding.matchOverviewDireGpm2.setText(String.format("%d",player_7.getInt("gold_per_min")));
-//                            binding.matchOverviewDireXpm2.setText(String.format("%d",player_7.getInt("xp_per_min")));
 
                             JSONObject player_8 = players.getJSONObject(7);
                             binding.matchOverviewDirePlayer3.setText(player_8.getString("personaname"));
                             binding.matchOverviewDireKda3.setText(String.format("%d/%d/%d", player_8.getInt("kills"), player_8.getInt("deaths"), player_8.getInt("assists")));
-//                            binding.matchOverviewDireGpm3.setText(String.format("%d",player_8.getInt("gold_per_min")));
-//                            binding.matchOverviewDireXpm3.setText(String.format("%d",player_8.getInt("xp_per_min")));
 
                             JSONObject player_9 = players.getJSONObject(8);
                             binding.matchOverviewDirePlayer4.setText(player_9.getString("personaname"));
                             binding.matchOverviewDireKda4.setText(String.format("%d/%d/%d", player_9.getInt("kills"), player_9.getInt("deaths"), player_9.getInt("assists")));
-//                            binding.matchOverviewDireGpm4.setText(String.format("%d",player_9.getInt("gold_per_min")));
-//                            binding.matchOverviewDireXpm4.setText(String.format("%d",player_9.getInt("xp_per_min")));
 
                             JSONObject player_10 = players.getJSONObject(9);
                             binding.matchOverviewDirePlayer5.setText(player_10.getString("personaname"));
                             binding.matchOverviewDireKda5.setText(String.format("%d/%d/%d", player_10.getInt("kills"), player_10.getInt("deaths"), player_10.getInt("assists")));
-//                            binding.matchOverviewDireGpm5.setText(String.format("%d",player_10.getInt("gold_per_min")));
-//                            binding.matchOverviewDireXpm5.setText(String.format("%d",player_10.getInt("xp_per_min")));
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -168,6 +140,8 @@ public class MatchOverviewFragment extends Fragment {
 
         return String.format("%02d:%02d:%02d", h, m, s);
     }
+
+
 
     @Override
     public void onDestroyView() {

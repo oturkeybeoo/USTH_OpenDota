@@ -1,6 +1,7 @@
 package vn.edu.usth.opendota.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,21 +14,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import vn.edu.usth.opendota.Match;
+import vn.edu.usth.opendota.MatchDetailsActivity;
+import vn.edu.usth.opendota.model.MatchModel;
 import vn.edu.usth.opendota.R;
-import vn.edu.usth.opendota.SelectListener;
 
 
 public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> {
 
     private Context context;
-    private ArrayList<Match> listMatch;
-    private SelectListener listener;
+    private ArrayList<MatchModel> listMatch;
+//    private SelectListener listener;
 
-    public MatchAdapter(Context context, ArrayList<Match> listMatch, SelectListener listener) {
+    public MatchAdapter(Context context, ArrayList<MatchModel> listMatch) {
         this.context = context;
         this.listMatch = listMatch;
-        this.listener = listener;
+//        this.listener = listener;
     }
 
 
@@ -36,15 +37,13 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // gán view
         View view = LayoutInflater.from(context).inflate(R.layout.match_item, parent, false);
-        return new ViewHolder(view);
+        return new MatchAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Gán dữ liêuk
-        Match match = listMatch.get(position);
+        MatchModel match = listMatch.get(position);
         holder.matchHero.setImageResource(match.getHero());
         holder.matchMode.setText(match.getMode());
         holder.matchLength.setText(match.getLength());
@@ -54,7 +53,10 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onItemClicked();listMatch.get(position);
+//                listener.onItemClicked();
+                listMatch.get(position);
+                context.startActivities(new Intent[]{new Intent(context, MatchDetailsActivity.class)});
+
             }
         });
     }
@@ -65,6 +67,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
+
         ImageView matchHero;
         TextView matchMode, matchLength, matchEnd, matchKda;
         LinearLayout layout;

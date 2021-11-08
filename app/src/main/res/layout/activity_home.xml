@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/black">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
@@ -17,9 +18,9 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
             android:background="@color/blue"
-            android:layout_alignParentBottom="true"
             app:tabIndicatorColor="@color/light_blue"
             app:tabMode="auto"
             app:tabSelectedTextColor="@color/light_blue"
