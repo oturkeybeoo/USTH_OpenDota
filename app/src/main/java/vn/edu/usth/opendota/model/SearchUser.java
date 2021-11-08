@@ -1,4 +1,4 @@
-package vn.edu.usth.opendota;
+package vn.edu.usth.opendota.model;
 
 public class SearchUser {
     private int avatar;

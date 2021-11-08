@@ -74,11 +74,8 @@ public class HomeMatchesFragment extends Fragment {
                                 matchAdapter = new MatchAdapter(getContext(), matchList);
                                 recyclerView = view.findViewById(R.id.recentmatch);
                                 recyclerView.setHasFixedSize(true);
-
                                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext());
-
                                 recyclerView.setLayoutManager(linearLayoutManager);
-
                                 recyclerView.setAdapter(matchAdapter);
                             }
 

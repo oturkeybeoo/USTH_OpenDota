@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.usth.opendota.adapter.SearchAdapter;
+import vn.edu.usth.opendota.model.SearchUser;
 
 public class SearchActivity extends AppCompatActivity {
 

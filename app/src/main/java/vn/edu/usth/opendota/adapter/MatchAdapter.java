@@ -23,16 +23,11 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
 
     private Context context;
     private ArrayList<MatchModel> listMatch;
-//    private SelectListener listener;
 
     public MatchAdapter(Context context, ArrayList<MatchModel> listMatch) {
         this.context = context;
         this.listMatch = listMatch;
-//        this.listener = listener;
     }
-
-
-
 
     @NonNull
     @Override
@@ -60,6 +55,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
             }
         });
     }
+
 
     @Override
     public int getItemCount() {

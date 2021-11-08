@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.usth.opendota.R;
-import vn.edu.usth.opendota.SearchUser;
+import vn.edu.usth.opendota.model.SearchUser;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHolder> implements Filterable {
 
