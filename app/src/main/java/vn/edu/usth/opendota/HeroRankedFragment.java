@@ -35,9 +35,13 @@ public class HeroRankedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        unit();
-        return inflater.inflate(R.layout.fragment_hero_ranked, container, false);
+//        LayoutInflater localInflater = getActivity().getLayoutInflater();
+        View mView = inflater.inflate(R.layout.fragment_hero_ranked, container, false);
+        unit(mView);
+        return mView;
+
     }
+
 
     @Override
     public void onResume() {
@@ -46,7 +50,7 @@ public class HeroRankedFragment extends Fragment {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private void unit() {
+    private void unit(View view) {
         HeroRanked hero1 = new HeroRanked("Abadon", "50.00%", "20.08%");
         HeroRanked hero2 = new HeroRanked("Zeus", "40.00%", "30.08%");
         HeroRanked hero3 = new HeroRanked("Lina", "20.00%", "20.08%");
@@ -58,7 +62,7 @@ public class HeroRankedFragment extends Fragment {
         heroRankedLst.add(hero4);
         heroRankedLst.add(hero5);
         // Anh xa map layout voi code
-        RecyclerView heroRankedList = requireView().findViewById(R.id.HeroRankedList);
+        RecyclerView heroRankedList = view.findViewById(R.id.HeroRankedList);
         // Khoi tao layout
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         heroRankedList.setLayoutManager(layoutManager);

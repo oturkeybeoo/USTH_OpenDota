@@ -2,8 +2,25 @@ package vn.edu.usth.opendota;
 
 public class HeroRanked {
     String hero_name;
+    String rank;
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
     String pick_rate;
     String win_rate;
+
+    public HeroRanked(String rank, String hero_name, String pick_rate, String win_rate) {
+        this.hero_name = hero_name;
+        this.rank = rank;
+        this.pick_rate = pick_rate;
+        this.win_rate = win_rate;
+    }
 
     public HeroRanked(String hero_name, String pick_rate, String win_rate) {
         this.hero_name = hero_name;
