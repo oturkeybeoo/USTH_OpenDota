@@ -11,5 +11,6 @@ Group 5:
 
 Links:
 - Mid-term Presentation Slide: https://bit.ly/opendota-mid-term
+- Final Examination Presentation Slide: https://bit.ly/opendota-final
 - Figma: https://bit.ly/opendota-figma
 
