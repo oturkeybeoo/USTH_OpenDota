@@ -19,8 +19,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/home_overview_avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher"
             app:shapeAppearanceOverlay="@style/roundimageView" />
@@ -31,7 +31,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="nhyysaepx(VN)"
             android:textColor="@color/white"
             android:textSize="18dp" />
 
@@ -60,7 +59,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -85,7 +83,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -110,7 +107,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="0%"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -139,12 +135,12 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/home_overview_steam_url"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://steamcommunity.com/id/nhyysaepx"
+            android:layout_marginLeft="20dp"
             android:textColor="@color/white"
-            android:textSize="14dp"
-            android:layout_marginLeft="20dp"/>
+            android:textSize="14dp" />
 
     </LinearLayout>
 
@@ -183,7 +179,6 @@
                 android:id="@+id/leaderboard_rank"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="#0"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
@@ -220,7 +215,6 @@
                 android:id="@+id/solo_competitive_rank"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="#0"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
@@ -257,7 +251,6 @@
                 android:id="@+id/competitive_rank"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="#0"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
@@ -292,7 +285,6 @@
                 android:id="@+id/mmr"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="0"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"

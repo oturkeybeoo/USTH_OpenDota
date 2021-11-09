@@ -141,12 +141,9 @@ public class MatchOverviewFragment extends Fragment {
         return String.format("%02d:%02d:%02d", h, m, s);
     }
 
-
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
-
 }
