@@ -23,6 +23,9 @@ import vn.edu.usth.opendota.databinding.FragmentMatchOverviewBinding;
 
 public class MatchOverviewFragment extends Fragment {
 
+    private Long match_id;
+
+
     private FragmentMatchOverviewBinding binding;
 
     public MatchOverviewFragment() {
@@ -40,9 +43,9 @@ public class MatchOverviewFragment extends Fragment {
     }
 
     private void fetchData() {
-        String match_id = "6258984257";
+        match_id = getActivity().getIntent().getLongExtra("match_id", 0);
         RequestQueue queue = Volley.newRequestQueue(getContext());
-        String url = String.format("https://opendota.com/api/matches/%s", match_id);
+        String url = String.format("https://opendota.com/api/matches/%d", match_id);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -85,7 +88,7 @@ public class MatchOverviewFragment extends Fragment {
                             binding.matchOverviewRadiantKda2.setText(String.format("%d/%d/%d", player_2.getInt("kills"), player_2.getInt("deaths"), player_2.getInt("assists")));
 
                             JSONObject player_3 = players.getJSONObject(2);
-                            binding.matchOverviewRadiantPlayer3.setText(player_2.getString("personaname"));
+                            binding.matchOverviewRadiantPlayer3.setText(player_3.getString("personaname"));
                             binding.matchOverviewRadiantKda3.setText(String.format("%d/%d/%d", player_3.getInt("kills"), player_3.getInt("deaths"), player_3.getInt("assists")));
 
                             JSONObject player_4 = players.getJSONObject(3);

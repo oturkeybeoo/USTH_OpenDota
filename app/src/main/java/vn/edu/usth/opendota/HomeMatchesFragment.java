@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +61,8 @@ public class HomeMatchesFragment extends Fragment {
                         try {
                             for (int i = 0; i < 20; i++) {
                                 JSONObject match = response.getJSONObject(i);
-                                Integer match_id = match.getInt("match_id");
+                                Long match_id = match.getLong("match_id");
+
                                 Integer duration = match.getInt("duration");
                                 Integer game_mode = match.getInt("game_mode");
                                 Integer hero_id = match.getInt("hero_id");
@@ -69,7 +71,9 @@ public class HomeMatchesFragment extends Fragment {
                                 Integer assists = match.getInt("assists");
                                 Long start_time = match.getLong("start_time");
 
-                                matchList.add(new MatchModel(R.drawable.dire_logo, game_mode.toString(), getKda(kills, deaths, assists), getTime(duration), getEndedTime(start_time, duration)));
+                                Log.d("MATCH ID", response.toString());
+
+                                matchList.add(new MatchModel(match_id, R.drawable.dire_logo, game_mode.toString(), getKda(kills, deaths, assists), getTime(duration), getEndedTime(start_time, duration)));
 
                                 matchAdapter = new MatchAdapter(getContext(), matchList);
                                 recyclerView = view.findViewById(R.id.recentmatch);
@@ -91,21 +95,8 @@ public class HomeMatchesFragment extends Fragment {
         });
         queue.add(jsonObjectRequest);
 
-//        countryAdapter = new CountryAdapter(getContext(), countryLists);
-//        countryRecyclerView.setAdapter(countryAdapter);
-//        countryAdapter.setCountryLists(countryLists);
-//        countryAdapter.notifyDataSetChanged();
-//        progressBar.setVisibility(View.GONE);
         return view;
     }
-
-//    @Override
-//    protected void onStop () {
-//        super.onStop();
-//        if (requestQueue != null) {
-//            requestQueue.cancelAll(TAG);
-//        }
-//    }
 
     private String getTime(Integer time) {
         int h, m, s;

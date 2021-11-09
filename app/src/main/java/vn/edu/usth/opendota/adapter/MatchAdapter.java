@@ -45,12 +45,15 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
         holder.matchEnd.setText(match.getEnded());
         holder.matchKda.setText(match.getKda());
 
+
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                listener.onItemClicked();
                 listMatch.get(position);
-                context.startActivities(new Intent[]{new Intent(context, MatchDetailsActivity.class)});
+                Intent intent = new Intent(context, MatchDetailsActivity.class);
+                intent.putExtra("match_id", match.getMatch_id());
+                context.startActivity(intent);
 
             }
         });

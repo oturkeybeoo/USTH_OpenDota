@@ -3,13 +3,15 @@ package vn.edu.usth.opendota.model;
 import java.util.ArrayList;
 
 public class MatchModel {
-    private int hero;
+    private Long match_id;
+    private Integer hero;
     private String mode;
     private String kda;
     private String length;
     private String ended;
 
-    public MatchModel(int hero, String mode, String kda, String length, String ended) {
+    public MatchModel(Long match_id, Integer hero, String mode, String kda, String length, String ended) {
+        this.match_id = match_id;
         this.hero = hero;
         this.mode = mode;
         this.kda = kda;
@@ -17,7 +19,15 @@ public class MatchModel {
         this.ended = ended;
     }
 
-    public int getHero() {
+    public Long getMatch_id() {
+        return match_id;
+    }
+
+    public void setMatch_id(Long match_id) {
+        this.match_id = match_id;
+    }
+
+    public Integer getHero() {
         return hero;
     }
 
