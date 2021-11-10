@@ -59,8 +59,12 @@ public class MatchOverviewFragment extends Fragment {
                             Integer dire_score = response.getInt("dire_score");
                             Integer game_mode = response.getInt("game_mode");
                             String duration = getTime(response.getInt("duration"));
-                            String radiant_team_name = response.getJSONObject("radiant_team").getString("name");
-                            String dire_team_name = response.getJSONObject("dire_team").getString("name");
+                            String radiant_team_name = "RADIANT";
+                            String dire_team_name = "DIRE";
+                            if (game_mode == 2) {
+                                radiant_team_name = response.getJSONObject("radiant_team").getString("name");
+                                dire_team_name = response.getJSONObject("dire_team").getString("name");
+                            }
                             JSONArray players = response.getJSONArray("players");
 
                             if (radiant_win) {
@@ -74,7 +78,7 @@ public class MatchOverviewFragment extends Fragment {
                             binding.matchOverviewRegion.setText(region.toString());
                             binding.matchOverviewDireKills.setText(dire_score.toString());
                             binding.matchOverviewRadiantKills.setText(radiant_score.toString());
-                            binding.matchOverviewGameMode.setText(game_mode.toString());
+                            binding.matchOverviewGameMode.setText(getMode(game_mode));
                             binding.matchOverviewDuration.setText(duration);
                             binding.matchOverviewRadiantTeamName.setText(radiant_team_name);
                             binding.matchOverviewDireTeamName.setText(dire_team_name);
@@ -130,6 +134,16 @@ public class MatchOverviewFragment extends Fragment {
             }
         });
         queue.add(jsonObjectRequest);
+    }
+
+    private String getMode(Integer mode_id) {
+        if (mode_id == 22) {
+            return "All Draft";
+        } else if (mode_id == 2) {
+            return "Captain Mode";
+        } else {
+            return mode_id.toString();
+        }
     }
 
     private String getTime(Integer time) {

@@ -49,10 +49,10 @@ public class HomePeersFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_peers, container, false);
 
-        String player_id = "339941742";
+        Long player_id = getActivity().getIntent().getLongExtra("player_id", 339941742);;
         peerModelArrayList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(getContext());
-        String url = String.format("https://opendota.com/api/players/%s/peers", player_id);
+        String url = String.format("https://opendota.com/api/players/%d/peers", player_id);
 
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {

@@ -1,23 +1,23 @@
 package vn.edu.usth.opendota.model;
 
 public class HeroModel {
-    private Integer hero_id;
+    private String hero_id;
     private String last_played;
     private Integer games;
     private String win_rate;
 
-    public HeroModel(Integer hero_id, String last_played, Integer games, String win_rate) {
+    public HeroModel(String hero_id, String last_played, Integer games, String win_rate) {
         this.hero_id = hero_id;
         this.last_played = last_played;
         this.games = games;
         this.win_rate = win_rate;
     }
 
-    public Integer getHero_id() {
+    public String getHero_id() {
         return hero_id;
     }
 
-    public void setHero_id(Integer hero_id) {
+    public void setHero_id(String hero_id) {
         this.hero_id = hero_id;
     }
 

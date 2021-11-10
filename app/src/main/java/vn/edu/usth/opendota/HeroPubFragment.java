@@ -82,20 +82,20 @@ public class HeroPubFragment extends Fragment {
         //xu ly sau khi chon rank
         String rank = rankObject.getRank_name();
         for (HeroRanked heroRanked: heroRankedLst){
-            if (rank.equals(heroRanked.getRank())){
-                heroRankedLstUpload.add(heroRanked);
-            }
-        }
-        if (heroRankedLstUpload != null && heroRankedLstUpload.size() > 0) {
-            unit(view, true);
-            Toast.makeText(getActivity(), "Selected " + rankObject.getRank_name(), Toast.LENGTH_SHORT).show();
-        } else {
-            adapter = new ItemRankedListAdapter(getActivity(), heroRankedLstUpload);
-            heroRankedList.setAdapter(adapter);
-            // thay doi list khi du lieu thay doi
-            adapter.notifyDataSetChanged();
+        if (rank.equals(heroRanked.getRank())){
+            heroRankedLstUpload.add(heroRanked);
         }
     }
+        if (heroRankedLstUpload != null && heroRankedLstUpload.size() > 0) {
+        unit(view, true);
+        Toast.makeText(getActivity(), "Selected " + rankObject.getRank_name(), Toast.LENGTH_SHORT).show();
+    } else {
+        adapter = new ItemRankedListAdapter(getActivity(), heroRankedLstUpload);
+        heroRankedList.setAdapter(adapter);
+        // thay doi list khi du lieu thay doi
+        adapter.notifyDataSetChanged();
+    }
+}
 
 
     @Override
@@ -107,7 +107,8 @@ public class HeroPubFragment extends Fragment {
     @SuppressLint("NotifyDataSetChanged")
     private void unit(View view, boolean status) {
             // set danh sach hero
-        if (status){
+        if (status) {
+
 //            RecyclerView heroRankedList = view.findViewById(R.id.heroRankedList);
             // Khoi tao layout
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -117,7 +118,11 @@ public class HeroPubFragment extends Fragment {
             heroRankedList.setAdapter(adapter);
             // thay doi list khi du lieu thay doi
             adapter.notifyDataSetChanged();
-        }else {
+
+        } else {
+
+
+
             HeroRanked hero1 = new HeroRanked("Divine", "Abaddon", "50.00%", "20.08%");
             HeroRanked hero2 = new HeroRanked("Divine", "Zeus", "40.00%", "30.08%");
             HeroRanked hero3 = new HeroRanked("Legend", "Lina", "20.00%", "20.08%");
@@ -128,6 +133,7 @@ public class HeroPubFragment extends Fragment {
             heroRankedLst.add(hero3);
             heroRankedLst.add(hero4);
             heroRankedLst.add(hero5);
+
             // set danh sach rank
             RankObject rankObject0 = new RankObject(0, "dire_logo", "Herald");
             RankObject rankObject1 = new RankObject(1, "dire_logo", "Guardian");
@@ -141,13 +147,14 @@ public class HeroPubFragment extends Fragment {
             rankObjectList.add(rankObject3);
             rankObjectList.add(rankObject4);
             rankObjectList.add(rankObject5);
+
             // Anh xa map layout voi code
 //            RecyclerView heroRankedList = view.findViewById(R.id.heroRankedList);
             // Khoi tao layout
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
             heroRankedList.setLayoutManager(layoutManager);
             // Truyen tham so vào adapter
-            adapter = new ItemRankedListAdapter(getActivity(), heroRankedLst);
+            adapter = new ItemRankedListAdapter(getContext(), heroRankedLst);
             heroRankedList.setAdapter(adapter);
             // thay doi list khi du lieu thay doi
             adapter.notifyDataSetChanged();

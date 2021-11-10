@@ -3,10 +3,10 @@ package vn.edu.usth.opendota.model;
 public class SearchUser {
     private int avatar;
     private String name;
-    private String id;
+    private Long id;
 
 
-    public SearchUser(int avatar, String name, String id) {
+    public SearchUser(int avatar, String name, Long id) {
         this.avatar = avatar;
         this.name = name;
         this.id = id;
@@ -28,11 +28,11 @@ public class SearchUser {
         this.name = name;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

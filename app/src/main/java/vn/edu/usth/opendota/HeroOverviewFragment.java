@@ -31,7 +31,7 @@ public class HeroOverviewFragment extends Fragment {
         new TabLayoutMediator(hero_overview_tab_layout, hero_overview_view_pager, (tab, position) -> {
             switch (position) {
                 case 0:
-                    tab.setText("Ranked");
+                    tab.setText("Professional");
                     break;
                 case 1:
                     tab.setText("Public");

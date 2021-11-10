@@ -51,9 +51,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         switch(item.getItemId()){
+
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,
                         new HomeFragment()).commit();
+//                Intent intent = new Intent(getBaseContext(), MainActivity.class);
+//                intent.putExtra("player_id", 339941742);
+//                startActivity(intent);
                 break;
             case R.id.heroes:
                 getSupportFragmentManager().beginTransaction().replace(R.id.placeholder_fragment,

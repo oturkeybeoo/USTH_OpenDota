@@ -1,11 +1,14 @@
 package vn.edu.usth.opendota.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,15 +17,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.usth.opendota.MainActivity;
+import vn.edu.usth.opendota.MatchDetailsActivity;
 import vn.edu.usth.opendota.R;
 import vn.edu.usth.opendota.model.SearchUser;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHolder> implements Filterable {
 
+    private Context context;
     private List<SearchUser> mListUsers;
     private List<SearchUser> mListUsersAll;
 
-    public SearchAdapter(List<SearchUser> mListUsers) {
+    public SearchAdapter(List<SearchUser> mListUsers, Context context) {
+        this.context = context;
         this.mListUsers = mListUsers;
         this.mListUsersAll = mListUsers;
     }
@@ -30,7 +37,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHo
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_result, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.search_result, parent, false);
         return new UserViewHolder(view);
     }
 
@@ -43,7 +50,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHo
 
         holder.user_avatar.setImageResource(user.getAvatar());
         holder.user_name.setText(user.getName());
-        holder.user_id.setText(user.getId());
+        holder.user_id.setText(user.getId().toString());
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.putExtra("player_id", user.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -90,6 +106,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHo
         private ImageView user_avatar;
         private TextView user_name;
         private TextView user_id;
+        private RelativeLayout layout;
 
 
         public UserViewHolder(@NonNull View itemView) {
@@ -97,6 +114,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.UserViewHo
             user_avatar = itemView.findViewById(R.id.user_avatar);
             user_name = itemView.findViewById(R.id.user_name);
             user_id = itemView.findViewById(R.id.user_id);
+            layout = itemView.findViewById(R.id.search_layout);
         }
     }
 }

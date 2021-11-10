@@ -49,10 +49,10 @@ public class HomeMatchesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_matches, container, false);
 
-        String player_id = "339941742";
+        Long player_id = getActivity().getIntent().getLongExtra("player_id", 339941742);;
         matchList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(getContext());
-        String url = String.format("https://opendota.com/api/players/%s/matches", player_id);
+        String url = String.format("https://opendota.com/api/players/%d/matches", player_id);
 
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
@@ -71,9 +71,7 @@ public class HomeMatchesFragment extends Fragment {
                                 Integer assists = match.getInt("assists");
                                 Long start_time = match.getLong("start_time");
 
-                                Log.d("MATCH ID", response.toString());
-
-                                matchList.add(new MatchModel(match_id, R.drawable.dire_logo, game_mode.toString(), getKda(kills, deaths, assists), getTime(duration), getEndedTime(start_time, duration)));
+                                matchList.add(new MatchModel(match_id, R.drawable.dire_logo, getMode(game_mode), getKda(kills, deaths, assists), getTime(duration), getEndedTime(start_time, duration)));
 
                                 matchAdapter = new MatchAdapter(getContext(), matchList);
                                 recyclerView = view.findViewById(R.id.recentmatch);
@@ -96,6 +94,16 @@ public class HomeMatchesFragment extends Fragment {
         queue.add(jsonObjectRequest);
 
         return view;
+    }
+
+    private String getMode(Integer mode_id) {
+        if (mode_id == 22) {
+            return "All Draft";
+        } else if (mode_id == 2) {
+            return "Captain Mode";
+        } else {
+            return mode_id.toString();
+        }
     }
 
     private String getTime(Integer time) {

@@ -3,28 +3,20 @@ package vn.edu.usth.opendota;
 public class HeroRanked {
     String hero_name;
     String rank;
-
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
-    }
-
-    String pick_rate;
+    String ban;
     String win_rate;
 
-    public HeroRanked(String rank, String hero_name, String pick_rate, String win_rate) {
+
+    public HeroRanked(String rank, String hero_name, String win_rate, String ban) {
         this.hero_name = hero_name;
         this.rank = rank;
-        this.pick_rate = pick_rate;
+        this.ban = ban;
         this.win_rate = win_rate;
     }
 
-    public HeroRanked(String hero_name, String pick_rate, String win_rate) {
+    public HeroRanked(String hero_name, String win_rate, String ban) {
         this.hero_name = hero_name;
-        this.pick_rate = pick_rate;
+        this.ban = ban;
         this.win_rate = win_rate;
     }
 
@@ -36,12 +28,20 @@ public class HeroRanked {
         this.hero_name = hero_name;
     }
 
-    public String getPick_rate() {
-        return pick_rate;
+    public String getRank() {
+        return rank;
     }
 
-    public void setPick_rate(String pick_rate) {
-        this.pick_rate = pick_rate;
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getBan() {
+        return ban;
+    }
+
+    public void setBan(String ban) {
+        this.ban = ban;
     }
 
     public String getWin_rate() {

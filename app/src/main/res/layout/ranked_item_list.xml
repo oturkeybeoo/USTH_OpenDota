@@ -27,35 +27,38 @@
             android:id="@+id/icon_hero">
 
         </ImageView>
+
         <TextView
+            android:id="@+id/Hero"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="Abadonnnnnnnnnnnnnnnn"
             android:textColor="@color/white"
-            android:layout_weight="1"
-            android:textSize="14dp"
-            android:id="@+id/Hero"/>
+            android:textSize="14dp" />
+
         </LinearLayout>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="50.08%"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            android:id="@+id/pick_rate"/>
 
         <TextView
+            android:id="@+id/win_rate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:text="50.08%"
             android:textColor="@color/white"
-            android:textSize="14dp"
-            android:id="@+id/win_rate"/>
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/bans"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
     </LinearLayout>
 
 

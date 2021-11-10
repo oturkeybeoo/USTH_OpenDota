@@ -12,6 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Spinner;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +30,11 @@ import vn.edu.usth.opendota.adapter.ItemRankedListAdapter;
 
 
 public class HeroTurboFragment extends Fragment {
+
         private ItemRankedListAdapter adapter;
         // Lay du lieu tu API truyen vao danh sach heroRankedList
         public List<HeroRanked> heroRankedLst = new ArrayList<>();
+
         public HeroTurboFragment() {
             // Required empty public constructor
         }
@@ -37,11 +50,54 @@ public class HeroTurboFragment extends Fragment {
                                  Bundle savedInstanceState) {
             // Inflate the layout for this fragment
 //        LayoutInflater localInflater = getActivity().getLayoutInflater();
-            View mView = inflater.inflate(R.layout.fragment_hero_ranked, container, false);
-            unit(mView);
-            return mView;
+            View mView = inflater.inflate(R.layout.fragment_hero_turbo, container, false);
+            heroRankedLst = new ArrayList<>();
+            RequestQueue queue = Volley.newRequestQueue(getContext());
+            String url = String.format("https://api.opendota.com/api/heroStats");
 
+            JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            try {
+                                for (int i = 0; i < response.length(); i++) {
+                                    JSONObject hero = response.getJSONObject(i);
+                                    String name = hero.getString("localized_name");
+                                    Integer win = hero.getInt("turbo_wins");
+                                    Integer pick = hero.getInt("turbo_picks");
+
+                                    heroRankedLst.add(new HeroRanked(name, getWinRate(pick, win), pick.toString()));
+
+
+
+                                    RecyclerView heroRankedList = mView.findViewById(R.id.HeroRankedList);
+                                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                                    heroRankedList.setLayoutManager(layoutManager);
+                                    adapter = new ItemRankedListAdapter(getActivity(), heroRankedLst);
+                                    heroRankedList.setAdapter(adapter);
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    error.printStackTrace();
+                }
+            });
+            queue.add(jsonObjectRequest);
+
+
+            return mView;
         }
+
+    private String getWinRate(Integer games, Integer wins) {
+        Double game = Double.valueOf(games);
+        Double win = Double.valueOf(wins);
+        Double win_rate = win*100/game;
+        return String.format("%.2f%%", win_rate);
+    }
 
 
         @Override
@@ -71,6 +127,5 @@ public class HeroTurboFragment extends Fragment {
             adapter = new ItemRankedListAdapter(getActivity(), heroRankedLst);
             heroRankedList.setAdapter(adapter);
             // thay doi list khi du lieu thay doi
-            adapter.notifyDataSetChanged();
         }
 }

@@ -57,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Pick Rate"
+                        android:text="Win Rate"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
 
@@ -66,9 +66,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Win Rate"
+                        android:text="Bans"
                         android:textColor="@color/white"
                         android:textSize="14dp" />
+
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -76,6 +77,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/HeroRankedList"
                     tools:listitem="@layout/ranked_item_list"/>
+
                 <!--Heroes List Ranked-->
                 <LinearLayout
                     android:layout_width="match_parent"

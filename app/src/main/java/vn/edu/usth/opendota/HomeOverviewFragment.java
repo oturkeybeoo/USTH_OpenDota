@@ -54,10 +54,10 @@ public class HomeOverviewFragment extends Fragment {
     }
 
     private void fetchData() {
-        String player_id = "339941742";
+        Long player_id = getActivity().getIntent().getLongExtra("player_id", 339941742);//
         RequestQueue queue = Volley.newRequestQueue(getContext());
-        String url = String.format("https://opendota.com/api/players/%s", player_id);
-        String win_lose_url = String.format("https://opendota.com/api/players/%s/wl", player_id);
+        String url = String.format("https://opendota.com/api/players/%d", player_id);
+        String win_lose_url = String.format("https://opendota.com/api/players/%d/wl", player_id);
 
 
 
@@ -66,9 +66,24 @@ public class HomeOverviewFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            Integer leaderboard_rank = response.getInt("leaderboard_rank");
-                            Integer solo_competitive_rank = response.getInt("solo_competitive_rank");
-                            Integer competitive_rank = response.getInt("competitive_rank");
+                            Integer leaderboard_rank;
+                            if (response.isNull("leaderboard_rank")) {
+                                leaderboard_rank = 0;
+                            } else {
+                                leaderboard_rank = response.getInt("leaderboard_rank");
+                            }
+                            Integer solo_competitive_rank;
+                            if (response.isNull("solo_competitive_rank")) {
+                                solo_competitive_rank = 0;
+                            } else {
+                                solo_competitive_rank = response.getInt("solo_competitive_rank");
+                            }
+                            Integer competitive_rank;
+                            if (response.isNull("competitive_rank")) {
+                                competitive_rank = 0;
+                            } else {
+                                competitive_rank = response.getInt("competitive_rank");
+                            }
                             Integer mmr = response.getJSONObject("mmr_estimate").getInt("estimate");
                             String name = response.getJSONObject("profile").getString("personaname");
                             String avatar = response.getJSONObject("profile").getString("avatarfull");
