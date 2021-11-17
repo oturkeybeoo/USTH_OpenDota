@@ -58,7 +58,8 @@ public class MatchOverviewFragment extends Fragment {
                             Integer radiant_score = response.getInt("radiant_score");
                             Integer dire_score = response.getInt("dire_score");
                             Integer game_mode = response.getInt("game_mode");
-                            String duration = getTime(response.getInt("duration"));
+                            Integer duration = response.getInt("duration");
+                            Long start_time = response.getLong("start_time");
                             String radiant_team_name = "RADIANT";
                             String dire_team_name = "DIRE";
                             if (game_mode == 2) {
@@ -79,7 +80,8 @@ public class MatchOverviewFragment extends Fragment {
                             binding.matchOverviewDireKills.setText(dire_score.toString());
                             binding.matchOverviewRadiantKills.setText(radiant_score.toString());
                             binding.matchOverviewGameMode.setText(getMode(game_mode));
-                            binding.matchOverviewDuration.setText(duration);
+                            binding.matchOverviewDuration.setText(getTime(duration));
+                            binding.matchOverviewEndTime.setText(getEndedTime(start_time, duration));
                             binding.matchOverviewRadiantTeamName.setText(radiant_team_name);
                             binding.matchOverviewDireTeamName.setText(dire_team_name);
 
@@ -156,6 +158,39 @@ public class MatchOverviewFragment extends Fragment {
         s = time;
 
         return String.format("%02d:%02d:%02d", h, m, s);
+    }
+
+    private String getEndedTime(Long start_time, Integer duration) {
+        Long now = System.currentTimeMillis() / 1000L;
+        Long ended = (now - start_time - duration);
+
+        if (ended / 31536000 == 1) {
+            return String.format("%d year ago", ended/31536000);
+        } else if (ended / 31536000 > 1) {
+            return String.format("%d years ago", ended/31536000);
+        } else if (ended / 2592000 == 1) {
+            return String.format("%d month ago", ended/2592000);
+        } else if (ended / 2592000 > 1) {
+            return String.format("%d months ago", ended/2592000);
+        } else if (ended / 604800 == 1) {
+            return String.format("%d week ago", ended/604800);
+        } else if (ended / 604800 > 1) {
+            return String.format("%d weeks ago", ended/604800);
+        } else if (ended / 86400 == 1) {
+            return String.format("%d day ago", ended/86400);
+        } else if (ended / 86400 > 1) {
+            return String.format("%d days ago", ended/86400);
+        } else if (ended / 3600 == 1) {
+            return String.format("%d hour ago", ended/3600);
+        } else if (ended / 3600 > 1) {
+            return String.format("%d hours ago", ended/3600);
+        } else if (ended / 60 == 1) {
+            return String.format("%d minute ago", ended/60);
+        } else if (ended / 60 > 1) {
+            return String.format("%d minutes ago", ended/60);
+        } else {
+            return String.format("%d seconds ago", ended);
+        }
     }
 
     @Override

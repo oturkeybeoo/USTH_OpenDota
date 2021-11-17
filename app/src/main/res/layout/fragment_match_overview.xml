@@ -44,8 +44,7 @@
                         android:id="@+id/match_overview_victory_team_icon"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:src="@drawable/radiant_logo" />
+                        android:layout_weight="2" />
 
                     <TextView
                         android:id="@+id/match_overview_victory_team"
@@ -53,7 +52,6 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Radiant Victory"
                         android:textColor="@color/white" />
 
                 </LinearLayout>
@@ -83,7 +81,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_toRightOf="@id/match_id"
-                            android:text="2357228510"
                             android:textColor="@color/white" />
 
                     </RelativeLayout>
@@ -107,7 +104,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_toRightOf="@+id/region"
-                            android:text="Vietnam"
                             android:textColor="@color/white" />
 
                     </RelativeLayout>
@@ -131,7 +127,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_toRightOf="@+id/skill"
-                            android:text="Normal"
                             android:textColor="@color/white" />
 
                     </RelativeLayout>
@@ -151,7 +146,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="12"
                     android:textColor="@color/green"
                     android:textSize="50dp" />
 
@@ -167,7 +161,6 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="All Draft"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -176,7 +169,6 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="00:00:00"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -185,7 +177,6 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="ENDED"
                         android:textColor="@color/white" />
 
                 </LinearLayout>
@@ -196,7 +187,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="12"
                     android:textColor="@color/red"
                     android:textSize="50dp" />
 

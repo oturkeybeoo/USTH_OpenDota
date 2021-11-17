@@ -59,8 +59,6 @@ public class HomeOverviewFragment extends Fragment {
         String url = String.format("https://opendota.com/api/players/%d", player_id);
         String win_lose_url = String.format("https://opendota.com/api/players/%d/wl", player_id);
 
-
-
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
